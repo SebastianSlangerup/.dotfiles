@@ -1,1 +1,2 @@
 alias dot="cd ~ && cd .dotfiles/"
+alias ls="ls --color=auto"

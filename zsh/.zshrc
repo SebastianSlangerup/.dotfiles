@@ -3,7 +3,7 @@
 
 # Coloring the prompt
 autoload -U colors && colors
-PS1="%{$fg[blue]%}%n %{$fg[yellow]%}%~ %{$reset_color%}%% "
+PS1="%{$fg[blue]%}%n %{$fg[magenta]%}%~ %{$reset_color%}%% "
 
 # Load aliases from .aliases file
 source $HOME/.dotfiles/.aliases
