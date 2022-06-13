@@ -1,2 +1,3 @@
 alias dot="cd ~ && cd .dotfiles/"
 alias ls="ls --color=auto"
+alias sail="./vendor/bin/sail"
