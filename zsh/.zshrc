@@ -12,9 +12,9 @@ precmd() {
     vcs_info
     # If there is no git branch, hide the parenthesis and the git branch message
     if [[ -z ${vcs_info_msg_0_} ]]; then
-        PROMPT='%{$fg[blue]%}%n %{$fg[magenta]%}%~ %{$reset_color%}%% '
+        PROMPT='%{$fg[cyan]%}%n %{$fg[magenta]%}%~ %{$reset_color%}%% '
     else
-        PROMPT='%{$fg[blue]%}%n %{$fg[magenta]%}%~ %{$fg[yellow]%}(${vcs_info_msg_0_}) %{$reset_color%}%% '
+        PROMPT='%{$fg[cyan]%}%n %{$fg[magenta]%}%~ %{$fg[yellow]%}(${vcs_info_msg_0_}) %{$reset_color%}%% '
     fi
 }
 
@@ -24,12 +24,14 @@ source $HOME/.dotfiles/.aliases
 # Vim keybindings
 bindkey -v
 
-# Very helpful tab-completion
-autoload -U compinit
+# Very helpful completion (Tab & Case-insensitive)
+autoload -Uz compinit
 zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)
+
 
 # Zsh syntax highlighting!
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
